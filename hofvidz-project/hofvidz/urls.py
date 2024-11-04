@@ -32,10 +32,10 @@ urlpatterns = [
     path('dashbord/',views.home,name= 'dashboard'),
     #auth paths 
     path('signup/',views.SignUp.as_view(),name= 'signup'),
-    path('login/',auth.views.LoginView.as_view(),name= 'login'),
-    path('logout/',auth.views.LogoutView.as_view(),name= 'logout'),
+    path('login/',auth_views.LoginView.as_view(),name= 'login'),
+    path('logout/',auth_views.LogoutView.as_view(),name= 'logout'),
     # halls 
-    path('hallofame/create', views.create_hall, name = 'create_hall'  )
+    path('hallofame/create', views.CreateHall.as_view(), name = 'create_hall'  )
     
     
     
